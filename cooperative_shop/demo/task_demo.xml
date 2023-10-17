@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+       <record id="task_01" model="cooperative_shop.task">
+           <field name="name">Print stickers</field>
+           <field name="start_time">2023-09-01 08:00:00</field>
+           <field name="stop_time">2023-09-04 08:00:00</field>
+           <field name="occurrences">1</field>
+           <field name="description">
+               We need to print 100 units of marketing stickers
+           </field>
+           <field name="task_type">simple</field>
+       </record>
+        <record id="task_02" model="cooperative_shop.task">
+           <field name="name">Send products to customers</field>
+           <field name="start_time">2023-09-05 08:00:00</field>
+           <field name="stop_time">2023-09-10 08:00:00</field>
+           <field name="occurrences">3</field>
+           <field name="description">
+               Check all pending packages for the customers
+           </field>
+           <field name="task_type">simple</field>
+       </record>
+        <record id="task_03" model="cooperative_shop.task">
+           <field name="name">Meeting with partners</field>
+           <field name="start_time">2023-09-10 08:00:00</field>
+           <field name="stop_time">2023-09-15 08:00:00</field>
+           <field name="occurrences">0</field>
+           <field name="description">
+               We need to talk about business with our partners
+           </field>
+           <field name="task_type">complex</field>
+       </record>
+    </data>
+</odoo>

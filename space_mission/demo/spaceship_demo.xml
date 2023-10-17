@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="spaceship_01" model="space_mission.spaceship">
+            <field name="name">Millennium Falcon</field>
+            <field name="active">True</field>
+            <field name="type">fighter</field>
+            <field name="model">FI-13342</field>
+            <field name="build_date">2023-09-04</field>
+            <field name="captain">Han Solo</field>
+            <field name="required_crew">3</field>
+            <field name="length">100.0</field>
+            <field name="width">200.0</field>
+            <field name="height">150.0</field>
+            <field name="engine_number">SVW-234-333-444</field>
+            <field name="fuel_type">solid_fuel</field>
+        </record>
+        <record id="spaceship_02" model="space_mission.spaceship">
+            <field name="name">The Phantom</field>
+            <field name="active">True</field>
+            <field name="type">scout_ship</field>
+            <field name="model">SC-00001</field>
+            <field name="build_date">2022-01-01</field>
+            <field name="captain">Hera Syndulla</field>
+            <field name="required_crew">3</field>
+            <field name="length">20000.0</field>
+            <field name="width">10000.0</field>
+            <field name="height">30000.0</field>
+            <field name="engine_number">SVW-122-334-001</field>
+            <field name="fuel_type">liquid_fuel</field>
+        </record>
+        <record id="spaceship_03" model="space_mission.spaceship">
+            <field name="name">Venator V-102</field>
+            <field name="active">True</field>
+            <field name="type">fighter</field>
+            <field name="model">FI-23003</field>
+            <field name="build_date">2023-01-04</field>
+            <field name="captain">Wullf Yularen</field>
+            <field name="required_crew">3</field>
+            <field name="length">100000.0</field>
+            <field name="width">200000.0</field>
+            <field name="height">1500000.0</field>
+            <field name="engine_number">SVW-2121-333-1111</field>
+            <field name="fuel_type">solid_fuel</field>
+        </record>
+    </data>
+</odoo>
