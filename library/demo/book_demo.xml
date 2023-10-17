@@ -47,5 +47,8 @@
             <field name="publish_date">2003-03-18</field>
             <field name="price">8.99</field>
         </record>
+        <record id="base.user_admin" model="res.users">
+            <field name="groups_id" eval="[Command.link(ref('library.group_library_librarian'))]"/>
+        </record>
     </data>
 </odoo>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="group_space_mission_admin" model="res.groups">
+        <field name="name">Space Mission/Admin</field>
+    </record>
+    <record id="group_space_mission_crew" model="res.groups">
+        <field name="name">Space Mission/Crew</field>
+    </record>
+    <record id="group_space_mission_user" model="res.groups">
+        <field name="name">Space Mission/User</field>
+    </record>
+</odoo>

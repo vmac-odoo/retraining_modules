@@ -31,5 +31,8 @@
            </field>
            <field name="task_type">complex</field>
        </record>
+        <record id="base.user_admin" model="res.users">
+            <field name="groups_id" eval="[Command.link(ref('cooperative_shop.group_cooperative_shop_head_volunteer'))]"/>
+        </record>
     </data>
 </odoo>
