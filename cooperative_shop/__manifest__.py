@@ -8,6 +8,7 @@
     'data': [
         'security/cooperative_shop_groups.xml',
         'security/ir.model.access.csv',
+        'views/task_views.xml',
         'views/cooperative_shop_menuitems.xml'
     ],
     'demo': [

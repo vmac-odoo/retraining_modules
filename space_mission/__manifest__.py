@@ -8,6 +8,7 @@
     'data': [
         'security/space_mission_groups.xml',
         'security/ir.model.access.csv',
+        'views/spaceship_views.xml',
         'views/space_mission_menuitems.xml'
     ],
     'demo': [
