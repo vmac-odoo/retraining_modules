@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
     <data noupdate="1">
+        <!-- spaceships -->
         <record id="spaceship_01" model="space_mission.spaceship">
             <field name="name">Millennium Falcon</field>
             <field name="active">True</field>
@@ -9,8 +10,8 @@
             <field name="build_date">2023-09-04</field>
             <field name="captain">Han Solo</field>
             <field name="required_crew">3</field>
-            <field name="length">100.0</field>
-            <field name="width">200.0</field>
+            <field name="length">200.0</field>
+            <field name="width">100.0</field>
             <field name="height">150.0</field>
             <field name="engine_number">SVW-234-333-444</field>
             <field name="fuel_type">solid_fuel</field>
@@ -37,12 +38,13 @@
             <field name="build_date">2023-01-04</field>
             <field name="captain">Wullf Yularen</field>
             <field name="required_crew">3</field>
-            <field name="length">100000.0</field>
-            <field name="width">200000.0</field>
+            <field name="length">200000.0</field>
+            <field name="width">10000.0</field>
             <field name="height">1500000.0</field>
             <field name="engine_number">SVW-2121-333-1111</field>
             <field name="fuel_type">solid_fuel</field>
         </record>
+        <!-- admin assign -->
         <record id="base.user_admin" model="res.users">
             <field name="groups_id" eval="[Command.link(ref('space_mission.group_space_mission_admin'))]"/>
         </record>

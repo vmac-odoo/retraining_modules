@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<odoo>
-    <record id="group_cooperative_shop_head_volunteer" model="res.groups">
-        <field name="name">Cooperative Shop/Head Volunteer</field>
-    </record>
-    <record id="group_cooperative_shop_volunteer" model="res.groups">
-        <field name="name">Cooperative Shop/Volunteer</field>
-    </record>
-</odoo>

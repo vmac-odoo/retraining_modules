@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mission_view_form" model="ir.ui.view">
+        <field name="name">space_mission.mission.form</field>
+        <field name="model">space_mission.mission</field>
+        <field name="arch" type="xml">
+            <form string="Mission View">
+                <header></header>
+                <sheet>
+                    <h1><field name="name"/></h1>
+                    <h3><field name="spaceship_id"/></h3>
+                    <group>
+                        <group>
+                        <separator string="Dates"/>
+                        <field name="launch_date"/>
+                        <field name="return_date"/>
+                    </group>
+                        <group>
+                        <separator string="Analytics"/>
+                        <field name="fuel_consumed"/>
+                        <field name="engines"/>
+                        <field name="accidents"/>
+                    </group>
+                    </group>
+                    <notebook>
+                        <page string="Crew">
+                            <field name="crew_ids" mode="kanban">
+                                <kanban>
+                                    <field name="name"/>
+                                    <field name="email"/>
+                                    <field name="phone"/>
+                                    <field name="mobile"/>
+                                    <field name="image_128"/>
+                                    <field name="avatar_128"/>
+                                    <templates>
+                                        <t t-name="kanban-box">
+                                            <div class="oe_kanban_global_click">
+                                                <div class="o_kanban_image">
+                                                    <img alt="Contact image" t-att-src="kanban_image('res.partner', 'avatar_128', record.id.raw_value)"/>
+                                                </div>
+                                                <div class="oe_kanban_details">
+                                                    <field name="name"/>
+                                                    <div t-if="record.email.raw_value"><field name="email" widget="email"/></div>
+                                                    <div t-if="record.phone.raw_value">Phone: <t t-esc="record.phone.value"/></div>
+                                                    <div t-if="record.mobile.raw_value">Mobile: <t t-esc="record.mobile.value"/></div>
+                                                </div>
+                                            </div>
+                                        </t>
+                                    </templates>
+                                </kanban>
+                            </field>
+                        </page>
+                        <page string="Related Projects">
+                            <field name="project_ids" mode="kanban">
+                                <kanban>
+                                    <field name="name" />
+                                    <field name="partner_id" />
+                                    <field name="user_id" />
+                                    <templates>
+                                        <t t-name="kanban-box">
+                                            <div class="oe_kanban_global_click">
+                                                <div class="oe_kanban_details">
+                                                    <h4><field name="name"/></h4>
+                                                    <h5>Customer<field name="partner_id"/></h5>
+                                                    <p>Project Manager: <field name="user_id"/></p>
+                                                </div>
+                                            </div>
+                                        </t>
+                                    </templates>
+                                </kanban>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record id="mission_view_tree" model="ir.ui.view">
+        <field name="name">space_mission.mission.view</field>
+        <field name="model">space_mission.mission</field>
+        <field name="arch" type="xml">
+            <tree string="Mission List">
+                <field name="name"/>
+                <field name="spaceship_id"/>
+                <field name="launch_date"/>
+                <field name="return_date"/>
+            </tree>
+        </field>
+    </record>
+    <record id="graph_view_tree" model="ir.ui.view">
+        <field name="name">space_mission.mission.graph</field>
+        <field name="model">space_mission.mission</field>
+        <field name="arch" type="xml">
+            <graph string="Mission Analysis">
+                <field name="launch_date" interval="month"/>
+                <field name="return_date" interval="month"/>
+                <field name="fuel_consumed" type="measure"/>
+                <field name="engines" type="measure"/>
+                <field name="accidents" type="measure"/>
+            </graph>
+        </field>
+    </record>
+    <record id="mission_view_search" model="ir.ui.view">
+       <field name="name">space_mission.mission.search</field>
+       <field name="model">space_mission.mission</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <group expand="0" string="Group By">
+                    <filter name="groupby_spaceship" string="Spaceship" context="{'group_by': 'spaceship_id'}"/>
+                </group>
+            </search>
+       </field>
+    </record>
+</odoo>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+       <!-- missions -->
+        <record id="mission_01" model="space_mission.mission">
+            <field name="name">To Moon</field>
+            <field name="spaceship_id" ref="spaceship_01"/>
+            <field name="crew_ids" eval="[(6,0,[ref('base.res_partner_address_15'),ref('base.res_partner_address_4'),ref('base.res_partner_address_2'),ref('base.res_partner_address_1')])]"/>
+            <field name="launch_date">2023-02-10 08:00:00</field>
+            <field name="return_date">2023-02-14 08:00:00</field>
+            <field name="fuel_consumed">20.3</field>
+            <field name="engines">1</field>
+            <field name="accidents">0</field>
+        </record>
+        <record id="mission_02" model="space_mission.mission">
+            <field name="name">To Mars</field>
+            <field name="spaceship_id" ref="spaceship_02"/>
+            <field name="crew_ids" eval="[(6,0,[ref('base.res_partner_address_24'),ref('base.res_partner_address_25'),ref('base.res_partner_address_10'),ref('base.res_partner_address_7')])]"/>
+            <field name="launch_date">2023-05-20 08:00:00</field>
+            <field name="return_date">2023-05-24 08:00:00</field>
+            <field name="fuel_consumed">30.0</field>
+            <field name="engines">3</field>
+            <field name="accidents">1</field>
+        </record>
+        <record id="mission_03" model="space_mission.mission">
+            <field name="name">To Saturn</field>
+            <field name="spaceship_id" ref="spaceship_03"/>
+            <field name="crew_ids" eval="[(6,0,[ref('base.res_partner_address_17'),ref('base.res_partner_address_16'),ref('base.res_partner_address_15'),ref('base.res_partner_address_10')])]"/>
+            <field name="launch_date">2023-09-25 08:00:00</field>
+            <field name="return_date">2023-09-30 08:00:00</field>
+            <field name="fuel_consumed">21.0</field>
+            <field name="engines">3</field>
+            <field name="accidents">4</field>
+        </record>
+    </data>
+</odoo>

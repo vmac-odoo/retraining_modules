@@ -1,3 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-cooperative_shop_task_head_volunteer,task head volunteer,cooperative_shop.model_cooperative_shop_task,cooperative_shop.group_cooperative_shop_head_volunteer,1,1,1,1
-cooperative_shop_task_volunteer,task volunteer,cooperative_shop.model_cooperative_shop_task,cooperative_shop.group_cooperative_shop_volunteer,1,1,1,0

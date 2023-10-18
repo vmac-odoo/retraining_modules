@@ -22,12 +22,18 @@
                     </group>
                     <notebook>
                         <page string="Spaceship Specs">
-                            <separator name="Dimensions"/>
-                            <field name="length"/>
-                            <field name="width"/>
-                            <separator name="Engine"/>
-                            <field name="engine_number"/>
-                            <field name="fuel_type"/>
+                            <group>
+                                <group>
+                                    <separator string="Dimensions"/>
+                                    <field name="length"/>
+                                    <field name="width"/>
+                                </group>
+                                <group>
+                                    <separator string="Engine"/>
+                                    <field name="engine_number"/>
+                                    <field name="fuel_type"/>
+                                </group>
+                            </group>
                         </page>
                     </notebook>
                 </sheet>

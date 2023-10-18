@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="project_task_wizard_view_form" model="ir.ui.view">
+        <field name="name">space_mission.project.task.wizard.form</field>
+        <field name="model">space_mission.project.task.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Project Task Wizard">
+                <group>
+                    <field name="name" />
+                    <field name="mission_id" />
+                </group>
+                <footer>
+                    <button name="action_create_project" string="Create Project" type="object" class="btn-primary"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+    <record id="launch_project_task_wizard" model="ir.actions.act_window">
+        <field name="name">Create Project from Mission</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">space_mission.project.task.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="project_task_wizard_view_form"/>
+        <field name="target">new</field>
+    </record>
+</odoo>
