@@ -7,6 +7,16 @@
             <form string="Spaceship View">
                 <header></header>
                 <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button
+                                name="action_get_missions"
+                                type="object"
+                                class="oe_stat_button"
+                                icon="fa-rocket"
+                        >
+                                <field string="Missions" name="mission_count" widget="statinfo"/>
+                        </button>
+                    </div>
                     <h1><field name="name"/></h1>
                     <h3><field name="model"/></h3>
                     <group>
@@ -27,6 +37,7 @@
                                     <separator string="Dimensions"/>
                                     <field name="length"/>
                                     <field name="width"/>
+                                    <field name="height"/>
                                 </group>
                                 <group>
                                     <separator string="Engine"/>
@@ -52,6 +63,31 @@
                 <field name="build_date"/>
                 <field name="fuel_type"/>
             </tree>
+        </field>
+    </record>
+    <record id="spaceship_view_kanban" model="ir.ui.view">
+        <field name="name">space_mission.spaceship.kanban</field>
+        <field name="model">space_mission.spaceship</field>
+        <field name="arch" type="xml">
+            <kanban class="o_kanban_mobile" default_group_by="type">
+                <field name="name"/>
+                <field name="type"/>
+                <field name="model"/>
+                <field name="captain"/>
+                <templates>
+                    <t t-name="kanban-box">
+                        <div t-attf-class="oe_kanban_global_click">
+                            <div t-attf-class="o_kanban_image text-primary">
+                                <i class="mr-5 py-2 fa fa-4x fas fa-space-shuttle"></i>
+                            </div>
+                            <div class="oe_kanban_details">
+                                <h4 class="o_kanban_record_title" t-esc="record.name.value"/>
+                                <p class="o_kanban_record_subtitle" t-esc="record.type.value" />
+                            </div>
+                        </div>
+                    </t>
+                </templates>
+            </kanban>
         </field>
     </record>
     <record id="spaceship_view_search" model="ir.ui.view">

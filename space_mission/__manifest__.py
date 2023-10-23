@@ -13,11 +13,16 @@
         "views/project_views.xml",
         "wizard/project_task_wizard_view.xml",
         "views/space_mission_menuitems.xml",
+        "report/spaceship_report_templates.xml",
+        "views/mission_web_templates.xml"
     ],
     "demo": [
         "demo/spaceship_demo.xml",
         "demo/mission_demo.xml",
     ],
-    "depends": ["project"],
+    "depends": [
+        "project",
+        "website"
+    ],
     "application": True,
 }

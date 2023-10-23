@@ -18,16 +18,15 @@ class ProjectTask(models.TransientModel):
 
     def action_create_project(self):
         self.ensure_one()
-        self.env["project.project"].create(
+        new_project = self.env["project.project"].create(
             {"name": self.name, "mission_ids": [Command.link(self.mission_id.id)]}
         )
         return {
-            "type": "ir.actions.client",
-            "tag": "display_notification",
-            "params": {
-                "title": "Project Created",
-                "message": f"Project for mission(s) has been created successfully.",
-                "type": "success",
-                "sticky": False,
-            },
+            "name": self.name,
+            "view_type": "form",
+            "view_mode": "form",
+            "res_model": "project.project",
+            "res_id": new_project.id,
+            "type": "ir.actions.act_window",
+            "target": "current",
         }
